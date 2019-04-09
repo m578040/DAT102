@@ -1,0 +1,26 @@
+package no.hvl.dat102;
+
+public class Kalkulator {
+	public static void main(String[] args) {
+		System.out.println("4 + 5 = " + pluss(4, 5));
+		System.out.println("8 - 5 = " + minus(8, 5));
+		System.out.println("2 * 5 = " + gange(2, 5));
+		System.out.println("10 / 5 = " + dele(10, 5));
+	}
+	
+	public static int pluss(int t1, int t2) {
+		return t1 + t2;
+	}
+	
+	public static int minus(int t1, int t2) {
+		return t1 - t2;
+	}
+	
+	public static int gange(int t1, int t2) {
+		return t1 * t2;
+	}
+	
+	public static int dele(int t1, int t2) {
+		return t1 / t2;
+	}
+}
