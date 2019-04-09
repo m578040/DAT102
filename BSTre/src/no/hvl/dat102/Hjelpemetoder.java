@@ -1,11 +1,11 @@
 package no.hvl.dat102;
 
 public class Hjelpemetoder {
-	public int finnMinHoyde(int antallNoder) {
-		return 2;
+	public static int finnMinHoyde(int antallNoder) {
+		return (int) (Math.log(antallNoder) / Math.log(2));
 	}
-	
-	public int finnMaksHoyde(int antallNoder) {
-		return 4;
+
+	public static int finnMaksHoyde(int antallNoder) {
+		return antallNoder - 1;
 	}
 }
