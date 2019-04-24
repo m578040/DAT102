@@ -1,11 +1,13 @@
 package no.hvl.dat102;
 
+import java.util.Iterator;
+
 //********************************************************************
 // KjedetBin�rS�keTre.java        
 //
 //********************************************************************
 
-public class KjedetBSTre<T extends Comparable<T>> implements BSTreADT<T> {
+public class KjedetBSTre<T extends Comparable<T>> implements BSTreADT<T>, Iterable<T> {
 
 	private int antall;
 	private BinaerTreNode<T> rot;
@@ -289,6 +291,10 @@ public class KjedetBSTre<T extends Comparable<T>> implements BSTreADT<T> {
 		}
 
 		return Math.max(finnHoydeRek(p.getVenstre()), finnHoydeRek(p.getHoyre())) + 1;
+	}
+
+	public Iterator<T> iterator() {
+		return new InordenIterator(rot);
 	}
 }// class
 

@@ -4,7 +4,7 @@ import java.util.*;
 import no.hvl.dat102.Hjelpemetoder;
 
 public class BSTreKlient {
-	final static int ANTALL_NODER = 1024;
+	final static int ANTALL_NODER = 8192;
 
 	public static void main(String[] args) {
 		int hoyeste = 0, laveste = 100, sumHoyde = 0;
@@ -16,7 +16,7 @@ public class BSTreKlient {
 			KjedetBSTre<Integer> tre = new KjedetBSTre<Integer>();
 			
 			for (int j = 0; j < ANTALL_NODER; j++) {
-				tre.leggTil(tilfeldig.nextInt(32));
+				tre.leggTil(tilfeldig.nextInt());
 			}
 			
 			if (hoyeste < tre.finnHoyde()) {
